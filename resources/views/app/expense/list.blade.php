@@ -38,7 +38,7 @@
                     <td>
                         <a href="{{ route('transaction.edit', ['id' => $userData->id]) }}" class="btn btn-primary btn-lg" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-pen"></i> Edit</a>
-                        <a href="" class="btn btn-danger btn-lg show_confirm " onclick="return confirm('Are you sure you want to delete this?');" style="font-size: 1.1rem;">
+                        <a href="{{ route('transaction.delete', ['id' => $userData->id]) }}" class="btn btn-danger btn-lg show_confirm " onclick="return confirm('Are you sure you want to delete this?');" style="font-size: 1.1rem;">
 
                             <i class="fa-solid fa-trash"></i> Remove</a>
                     </td>

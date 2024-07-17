@@ -20,11 +20,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\TransactionController::class, 'display'])->name('transaction.display');
+Route::get('/home', [App\Http\Controllers\TransactionController::class, 'list'])->name('transaction.list');
+Route::get('/create', [App\Http\Controllers\TransactionController::class, 'display'])->name('transaction.display');
 Route::post('/add', [App\Http\Controllers\TransactionController::class, 'store'])->name('transaction.store');
-Route::get('/list', [App\Http\Controllers\TransactionController::class, 'list'])->name('transaction.list');
-Route::get('/edit/{id}', [\App\Http\Controllers\TransactionController::class, 'edit'])->name('transaction.edit');
-Route::post('/update/{id}', [\App\Http\Controllers\TransactionController::class, 'update'])->name('transaction.update');
+// Route::get('/list', [App\Http\Controllers\TransactionController::class, 'list'])->name('transaction.list');
+Route::get('/edit/{id}', [App\Http\Controllers\TransactionController::class, 'edit'])->name('transaction.edit');
+Route::post('/update/{id}', [App\Http\Controllers\TransactionController::class, 'update'])->name('transaction.update');
+Route::get('/delete/{id}', [App\Http\Controllers\TransactionController::class, 'delete'])->name('transaction.delete');
 
 // Auth::routes();
 
