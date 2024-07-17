@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->decimal('amount');
-            $table->string('income');
-            $table->string('expense');
+            $table->string('type');
             $table->date('transaction_date');
             $table->timestamps();
         });
