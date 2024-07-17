@@ -79,13 +79,12 @@
                         </button>
                     </div>
                     @endif
+                    <a href="{{ route('transaction.list') }}" class="btn btn-primary btn-lg">
+                        </i> View Transactions</a>
+                    <br><br>
                     <h2> Add Data </h2>
                     <form method="post" action="/add" enctype="multipart/form-data">
                         @csrf
-                        <!-- <div class="form-group">
-                            <label>Hotel Owner ID </label>
-                            <input type="text" class="form-control" name="user_id" value="{{ auth()->user()->id }}" placeholder="Hotel-Owner-ID">
-                        </div> -->
                         <div class="form-group">
                             <label>Description</label>
                             <input type="text" class="form-control" name="description" placeholder="Desciption">

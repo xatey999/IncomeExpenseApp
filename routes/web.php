@@ -15,10 +15,10 @@ use App\Http\Controllers\TransactionController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('app.expense.create');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\TransactionController::class, 'list'])->name('transaction.list');
 Route::get('/create', [App\Http\Controllers\TransactionController::class, 'display'])->name('transaction.display');
@@ -28,7 +28,6 @@ Route::get('/edit/{id}', [App\Http\Controllers\TransactionController::class, 'ed
 Route::post('/update/{id}', [App\Http\Controllers\TransactionController::class, 'update'])->name('transaction.update');
 Route::get('/delete/{id}', [App\Http\Controllers\TransactionController::class, 'delete'])->name('transaction.delete');
 
-// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

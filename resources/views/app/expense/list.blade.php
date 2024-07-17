@@ -6,6 +6,10 @@
 
     <div class="app-main__outer col-md-10">
 
+        <a href="{{ route('transaction.display') }}" class="btn btn-primary btn-lg">
+            </i> Add Transaction</a>
+        <br><br>
+
         <table class="mb-1 table table-bordered">
             <thead>
                 <tr>
@@ -22,7 +26,7 @@
                 $counterVar = 1;
                 @endphp
                 @foreach ($userData as $userData)
-                <tr>
+                <tr class="{{ $userData->type == 'Income' ? 'table-success' : 'table-danger' }}">
                     <th>
                         @php
                         echo $counterVar;
@@ -42,6 +46,7 @@
 
                             <i class="fa-solid fa-trash"></i> Remove</a>
                     </td>
+
                 </tr>
                 @php
                 $counterVar++;
