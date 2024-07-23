@@ -14,8 +14,7 @@ class TransactionModel extends Model
     protected $fillable = [
         'description',
         'amount',
-        'income',
-        'expense',
+        'type',
         'transaction_date',
     ];
 }
